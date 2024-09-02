@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Agregar tarea</title>
+</head>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <h1>Crear tarea</h1>
+    <hr>
+    <form  th:action="@{/addTarea}"  method="post" th:object="${tarea}">
+        <label for="nombre">Tarea:</label>
+        <input type="text" id="nombre" name="nombre" th:field="*{nombre}" class="form-control mb-4 col-4" required>
+
+        <label for="descripcion">Descripcion:</label>
+        <input type="text" id="descripcion" name="descripcion" th:field="*{descripcion}" class="form-control mb-4 col-4" required>
+
+        <button type="submit" class="btn btn-info col-2">Guardar tarea</button>
+    </form>
+</div>
+</body>
+</html>
