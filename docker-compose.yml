@@ -7,7 +7,5 @@ services:
         MYSQL_USER: ${SPRING_DATASOURCE_USERNAME}
         MYSQL_PASSWORD: ${SPRING_DATASOURCE_PASSWORD}
         MYSQL_DATABASE: ${SPRING_DATASOURCE_DB}
-    ports:
-      - "3307:3306"
     volumes:
       - ./mysql:/var/lib/mysql
